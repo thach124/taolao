@@ -98,8 +98,12 @@
                                 Trợ giúp
                             </a>
                         </li>
-                        <li class="header__navbar-item header__navbar-item--strong header__navbar-item--separate">Đăng ký</li>
-                        <li class="header__navbar-item header__navbar-item--strong">Đăng nhập</li>
+                        <!-- <li class="header__navbar-item header__navbar-item--strong header__navbar-item--separate">Đăng ký</li>
+                        <li class="header__navbar-item header__navbar-item--strong">Đăng nhập</li> -->
+                        <li class="header__navbar-item header__navbar-user">
+                            <img src="./asset/img/user.png" alt="" class="header__navbar-user-img">
+                            <span class="header__navbar-user-name">Thạch Nguyễn</span>
+                        </li>
                     </ul>
                 </nav>
                 <!-- header with seach -->
@@ -157,11 +161,77 @@
                     <div class="header__cart">
                         <div class="header__cart-wrap">
                             <i class="header__cart-icon fas fa-shopping-cart"></i>
-                            <div class="header__cart-list header__cart-list--no-cart">
+                            <span class="header__cart-notice">3</span>
+                            <!-- no cart : header__cart-list--no-cart -->
+                            <div class="header__cart-list  ">
                                <img src="./asset/img/6.png" alt="" class="header__cart-no-cart-img">
                                 <span class="header__cart-list-no-cart-msg">
                                     Chưa có Sản phẩm
                                 </span>
+
+                                <h4 class="header__cart--heading">Sản phẩm đã thêm</h4>
+                                <ul class="header__cart-list-item">
+                                    <!-- Cart item -->
+                                    <li class="header__cart-item">
+                                        <img src="./asset/img/2.jpg" alt="" class="header__cart-img">
+                                        <div class="header__cart-item-info">
+                                            <div class="header__cart-item-head">
+                                                <h5 class="header__cart-item-name">Iphone 12 Pro Max 256GB</h5>
+                                                <div class="header__cart-item-price-wrap">
+                                                    <span class="header__cart-item-price">30.000.000đ</span>
+                                                    <span class="header__cart-item-multipy">x</span>
+                                                    <span class="header__cart-item-qnt">2</span>
+                                                </div>
+                                            </div>
+                                            <div class="header__cart-item-body">
+                                                <span class="header__cart-item-description">
+                                                    Phân loại: Xanh
+                                                </span>
+                                                <span class="header__cart-item-remove">Xóa</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="header__cart-item">
+                                        <img src="./asset/img/3.jpg" alt="" class="header__cart-img">
+                                        <div class="header__cart-item-info">
+                                            <div class="header__cart-item-head">
+                                                <h5 class="header__cart-item-name">IPad Pro  256GB</h5>
+                                                <div class="header__cart-item-price-wrap">
+                                                    <span class="header__cart-item-price">30.000.000đ</span>
+                                                    <span class="header__cart-item-multipy">x</span>
+                                                    <span class="header__cart-item-qnt">1</span>
+                                                </div>
+                                            </div>
+                                            <div class="header__cart-item-body">
+                                                <span class="header__cart-item-description">
+                                                    Phân loại: đen
+                                                </span>
+                                                <span class="header__cart-item-remove">Xóa</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="header__cart-item">
+                                        <img src="./asset/img/1.jfif" alt="" class="header__cart-img">
+                                        <div class="header__cart-item-info">
+                                            <div class="header__cart-item-head">
+                                                <h5 class="header__cart-item-name">Laptop Dell Core i9</h5>
+                                                <div class="header__cart-item-price-wrap">
+                                                    <span class="header__cart-item-price">28.000.000đ</span>
+                                                    <span class="header__cart-item-multipy">x</span>
+                                                    <span class="header__cart-item-qnt">3</span>
+                                                </div>
+                                            </div>
+                                            <div class="header__cart-item-body">
+                                                <span class="header__cart-item-description">
+                                                    Phân loại: Đen
+                                                </span>
+                                                <span class="header__cart-item-remove">Xóa</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+
+                                <a class="header__cart-view-cart btn btn--primary">Xem giỏ hàng</a>
                             </div> 
                         </div>
                         
@@ -173,7 +243,7 @@
 
         </div>
         <footer class="footer">
-            Điền đã code
+        
         </footer>
     </div>
     <!-- moda layout -->

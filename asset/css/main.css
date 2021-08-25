@@ -24,8 +24,11 @@
 .header__navbar-user {
     display: flex;
     justify-items: center;
+    position: relative;
 }
-
+.header__navbar-user:hover .header__navbar-user-menu {
+    display: block;
+}
 .header__navbar-user-img {
     width: 22px;
     height: 22px;
@@ -34,10 +37,63 @@
 }
 
 .header__navbar-user-name {
-    margin-left: 8px;
+    margin-left: 4px;
     font-size: 1.4rem;
     font-weight: 400;
+}
 
+/* Bảng thông tin cá nhân */
+.header__navbar-user-menu {
+    position: absolute;
+    z-index: 1;
+    padding-left: 0;
+    top: calc(100% + 4px);
+    right: 0;
+    width: 160px;
+    border-radius: 2px;
+    background-color: var(--white-color);
+    list-style: none;
+    box-shadow: 0 1px 2px rgb(228, 225, 225);
+    display: none;
+}
+.header__navbar-user-menu::before {
+    content: "";
+    border-width: 20px 25px;
+    border-style: solid;
+    border-color: transparent transparent var(--white-color) transparent;
+    position: absolute;
+    right: 0.5px;
+    top: -30px;
+}
+.header__navbar-user-menu::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -8px;
+    right: 0;
+    width: 74%;
+    height: 8px;
+}
+.header__navbar-user-item--separate {
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+.header__navbar-user-item a:first-child {
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+}
+.header__navbar-user-item a:last-child {
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+}
+.header__navbar-user-item a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 1.4rem;
+    padding: 2px 16px;
+    display: block;
+}
+.header__navbar-user-item a:hover {
+    background-color: #fafafa;
 }
 /* ẩn QR */
 .header__navbar-item--has-qr:hover .header__qr {
@@ -47,6 +103,10 @@
     display: block;
 }
 /* tùy chỉnh chữ */
+.far {
+    font-size: 1.8rem;
+    margin-right: 4px;
+}
 .header__navbar-item,
 .header__navbar-item-link {
     display: inline-block;
@@ -91,6 +151,9 @@
 .header__navbar-icon-link {
     color: var(--white-color);
     text-decoration: none;
+}
+.header__navbar-icon-link:nth-child(2) {
+    margin-left: 3px;
 }
 /* kích thước icon */
 .header__navbar-icon {
@@ -153,6 +216,7 @@
     animation: headerNotifyGrowth ease-in 0.25s;
     display: none;
     z-index: 1;
+    border-radius: 2px;
 }
 .header__notify::before {
     content: "";
@@ -370,6 +434,10 @@
 .header__logo {
     width: 200px;
 }
+.header__logo-link {
+    color: transparent; 
+    text-decoration: none;
+}
 .header__logo-img {
     width: 150px;
 }
@@ -402,7 +470,7 @@
 }
 .header__cart-list {
     position: absolute;
-    top: calc(100% - -1px);
+    top: calc(100% - 1px);
     right: -3px;
     background-color: var(--white-color);
     width: 410px;
@@ -591,7 +659,7 @@
 .header__seach-option{
     position: absolute;
     right: 0;
-    top: 100%;
+    top: calc(100% - 1px);
     width: 130px;
     list-style: none;
     box-shadow: 0 1px 2px rgb(228, 225, 225);
